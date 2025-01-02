@@ -1,0 +1,13 @@
+The following CSS code snippet suffers from an unusual and subtle error. It attempts to style a list, but due to an incorrect understanding of the `:nth-child` pseudo-class and the role of `li` elements, it does not work as intended.
+
+```css
+/* Incorrect CSS */
+ul li:nth-child(odd) {
+  background-color: lightblue;
+}
+ul li:nth-child(even) {
+  background-color: lightpink;
+} 
+```
+
+The expected behavior is that every other list item should alternate between lightblue and lightpink backgrounds. However, due to the way `:nth-child` works in conjunction with nested lists, this code will not always produce the desired effect.
