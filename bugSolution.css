@@ -1,0 +1,13 @@
+The correct way to style alternating list items, even in nested lists, is to use the `:nth-of-type` selector which acts upon the list items (`li`) themselves and not all child elements, regardless of their type.
+
+```css
+/* Correct CSS */
+ul li:nth-of-type(odd) {
+  background-color: lightblue;
+}
+ul li:nth-of-type(even) {
+  background-color: lightpink;
+}
+```
+
+This revised code ensures that every other list item will have the specified background color, regardless of the list's nesting level.  `nth-of-type` provides accurate and consistent styling for alternating list items in all cases.
